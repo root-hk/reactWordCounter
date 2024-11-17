@@ -23,6 +23,11 @@ const TextForm = ({ heading }) => {
         setText("");
     }
 
+    const copyHandler = () => {
+        let copiedText = document.getElementById("myBox").value;
+        navigator.clipboard.writeText(copiedText);
+    };
+
     return (
         <>
             <div>
@@ -44,6 +49,9 @@ const TextForm = ({ heading }) => {
                 </button>
                 <button className="btn btn-primary mx-2" onClick={clickClearHandler}>
                     Clear Text
+                </button>
+                <button className="btn btn-primary mx-2" onClick={copyHandler}>
+                    Copy Text
                 </button>
             </div>
             <div className="container my-3">
