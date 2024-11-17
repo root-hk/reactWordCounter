@@ -18,6 +18,11 @@ const TextForm = ({ heading }) => {
         let lowText = text.toLowerCase();
         setText(lowText);
     }
+
+    function clickClearHandler() {
+        setText("");
+    }
+
     return (
         <>
             <div>
@@ -36,6 +41,9 @@ const TextForm = ({ heading }) => {
                 </button>
                 <button className="btn btn-primary mx-2" onClick={clickLoHandler}>
                     Convert to lowerCase
+                </button>
+                <button className="btn btn-primary mx-2" onClick={clickClearHandler}>
+                    Clear Text
                 </button>
             </div>
             <div className="container my-3">
