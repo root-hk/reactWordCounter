@@ -5,7 +5,6 @@ const TextForm = ({ heading }) => {
     const [text, setText] = useState("Enter the text here");
 
     const handleOnchange = (event) => {
-        console.log("Changed");
         setText(event.target.value);
     };
 
